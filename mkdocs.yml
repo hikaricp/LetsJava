@@ -1,30 +1,55 @@
 site_name: Let's Java! Java 基础教程
-site_author: 'PegasusWang'
-repo_name: 'LetsJava'
-repo_url: 'https://github.com/hikaricp/spring-family'
+site_author: "PegasusWang"
+repo_name: "LetsJava"
+repo_url: "https://github.com/hikaricp/spring-family"
 
-copyright: 'Copyright &copy; 2019 - 2021 杨佳畅'
+copyright: "Copyright &copy; 2019 - 2021 杨佳畅"
 
 theme:
- name: material
- favicon: svg/school.svg
- logo: svg/logo.svg
- icon:
-  repo: fontawesome/brands/github-alt
- palette:
-  primary: black
-  accent: amber
- font:
-  text: 'Roboto'
-  code: 'Roboto Mono'
+  name: material
+  favicon: svg/school.svg
+  logo: svg/logo.svg
+  icon:
+    repo: fontawesome/brands/github-alt
+  palette:
+    primary: black
+    accent: amber
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
 
 extra_javascript:
- - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 extra:
- social:
-  - icon: fontawesome/brands/github
-    link: https://github.com/hikaricp
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hikaricp
+
+markdown_extensions:
+  - admonition
+  - footnotes # 脚注
+  - meta # 定义元数据，通过文章上下文控制，如disqus
+  - pymdownx.caret # 下划线上标
+  - pymdownx.tilde # 删除线下标
+  - pymdownx.critic # 增加删除修改高亮注释，可修饰行内或段落
+  - pymdownx.details # 提示块可折叠
+  - pymdownx.inlinehilite # 行内代码高亮
+  - pymdownx.mark # 文本高亮
+  - pymdownx.smartsymbols # 符号转换
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      guess_lang: true
+  - toc: # 锚点
+      permalink: true
+  - pymdownx.betterem: # 对加粗和斜体更好的检测
+      smart_enable: all
+  - pymdownx.tasklist: # 复选框checklist
+      custom_checkbox: true
 
 nav:
- - 简介: index.md
+  - 简介: index.md
+  - Java基础:
+      - "Hello Java!": basics/00_hello_java/hello_java.md
+      - "Java 基础类型": "basics/01_java_basic_types/basic_types.md"

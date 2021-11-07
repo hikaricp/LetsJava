@@ -1,2 +1,3 @@
-# LetsJava
-记录Java基础知识
+# Java基础教程
+![java](./java.jpeg)
+
